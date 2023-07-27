@@ -4,6 +4,8 @@ import Adapter.MemoryCardAdapter;
 import Factory.Coffee;
 import Factory.CoffeeFactory;
 import Factory.CoffeeType;
+import Proxy.DBConnection;
+import Proxy.DBConnectionProxy;
 import Singleton.Logger;
 
 public class Main {
@@ -13,6 +15,17 @@ public class Main {
         testFactory();
         System.out.println();
         testAdapter();
+        System.out.println();
+        testProxy();
+    }
+
+    private static void testProxy() {
+        DBConnection connection = new DBConnection("my-database");
+        final String host = "localhost";
+        final String port = "8080";
+        final String address = host + ":" + port;
+        DBConnectionProxy proxy = new DBConnectionProxy(connection, address);
+        proxy.connect();
     }
 
     public static void testFactory() {
