@@ -1,12 +1,12 @@
-import Adapter.Computer;
-import Adapter.MemoryCard;
-import Adapter.MemoryCardAdapter;
-import Factory.Coffee;
-import Factory.CoffeeFactory;
-import Factory.CoffeeType;
-import Proxy.DBConnection;
-import Proxy.DBConnectionProxy;
-import Singleton.Logger;
+import adapter.Computer;
+import adapter.MemoryCard;
+import adapter.MemoryCardAdapter;
+import factory.Coffee;
+import factory.CoffeeFactory;
+import factory.CoffeeType;
+import proxy.DBConnection;
+import proxy.DBConnectionProxy;
+import singleton.Logger;
 
 public class Main {
     private static final Logger log = Logger.getInstance();
@@ -39,7 +39,7 @@ public class Main {
         Computer computer = new Computer();
         MemoryCard mc = new MemoryCard("some info on card");
         MemoryCardAdapter adapter = new MemoryCardAdapter(mc);
-        computer.connectUsbDevice(adapter);
+        computer.setUsbDevice(adapter);
         computer.printInfoFromUsb();
     }
 }

@@ -1,4 +1,4 @@
-package Factory;
+package factory;
 
 public class CoffeeFactory {
     public static Coffee getCoffee(CoffeeType type) {

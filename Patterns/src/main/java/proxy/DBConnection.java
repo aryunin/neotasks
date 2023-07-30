@@ -1,6 +1,6 @@
-package Proxy;
+package proxy;
 
-import Singleton.Logger;
+import singleton.Logger;
 
 public class DBConnection implements Connection {
     private static final Logger log = Logger.getInstance();

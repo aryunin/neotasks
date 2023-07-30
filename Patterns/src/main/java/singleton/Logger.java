@@ -1,4 +1,4 @@
-package Singleton;
+package singleton;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
